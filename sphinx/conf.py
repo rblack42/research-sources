@@ -21,7 +21,11 @@ import sphinx_rtd_theme
 sys.path.insert(0, os.path.abspath('.'))
 
 extensions = [
+    'sphinxcontrib.tikz',
+    'sphinx_ext.wordcount',
 ]
+tikz_proc_suite = 'ImageMagick'
+tikz_latex_preamble = '\\usepackage{gitdags}'
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']

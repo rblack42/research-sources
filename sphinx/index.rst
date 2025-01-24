@@ -16,3 +16,6 @@ bibliographies for individual projects.
     :caption: Contents:
 
     reference-sources
+    common-git-commands
+    the-git-tbd-timeline
+    github-command-line-trunk-based-workflow

@@ -13,3 +13,5 @@ _venv
 __pycache__
 *.py[cod]
 
+# Generak
+_unpublished

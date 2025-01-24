@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Git TBD Timeline &mdash; Research Sources 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Github Command Line Trunk Based Workflow" href="github-command-line-trunk-based-workflow.html" />
+    <link rel="prev" title="Common Git Commands" href="common-git-commands.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Research Sources
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reference-sources.html">Reference Sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-git-commands.html">Common Git Commands</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Git TBD Timeline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#git-timelines">Git Timelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="github-command-line-trunk-based-workflow.html">Github Command Line Trunk Based Workflow</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Research Sources</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">The Git TBD Timeline</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/the-git-tbd-timeline.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-git-tbd-timeline">
+<h1>The Git TBD Timeline<a class="headerlink" href="#the-git-tbd-timeline" title="Link to this heading"></a></h1>
+<p>Read time: 8 minutes (2164 words)</p>
+<p>As a way to visualize the <em>Trunk-Based Development Workflow</em>, let’s use diagrams
+of the Git Timeline* to see what is happening. These diagrams were produced
+using the <em>TikZ</em> package and <em>LaTeX</em>.</p>
+<p>All of my projects begin with a basic project configuration that contains the
+<em>Python Sphinx</em> documentation tool which I have used to create lecture notes
+ever since <em>Sphinx</em> hit the world in 2008. Lately, I have been using <em>Ansible</em>
+to do this basic setup step. The basic project is tagged as the <strong>0.1.0</strong>
+release and hosted on Github. Most of my projects include a public documentation
+website created by <em>Sphinx</em> and hosted on <em>Github Pages</em>.</p>
+<section id="git-timelines">
+<h2>Git Timelines<a class="headerlink" href="#git-timelines" title="Link to this heading"></a></h2>
+<p>A <em>Git Timeline is an *Acyclic Directed Graph</em>. That is a fancy term for a data
+structure the “flows”, usuallly from left to right, along a <em>timeline</em>
+representing the development process. The timeline does not worry about actual
+clock time. instead, it marks important points in the development using simple
+symbols. Lines are drawn between these symbols. The lines represent time when
+some work is happening. The symbols mark the point when a new version of code
+isproduced and recorded in the history of the project. <em>Git</em> creates a record o
+all changes and provides a way to “go back in time” if needed as the project
+proceeds.</p>
+<p>a <em>timeline</em> can also include “branches”, were development activities are
+recorded alone a new timeline parallel to the original line. These parallel
+timelines can continue with code changes recorded at various points. Eventually,
+the new timeline may reach a point where the code developed is ready to be
+included in the original timeline. This is accomplished by a “merge” step where
+the two lines combine into one. <em>Git</em> provided a variety of tools for removing
+the branch timeline, if it is not longer needed.</p>
+<p>The “history” of a project is recorded at each symbol point along the entire
+timeline of a project. Each time we record changes, we include a text message
+designed to tell others what was done up to the point where the symbol occurs.
+Some projects have very strict rules for how these messages are to be formatted.</p>
+<p>With that overview of what a timeline is, let’s look at a typical project, ans
+see the timeline.</p>
+<div class="figure" id="id1" style="text-align: center"><p><img  src="_images/tikz-dcc10c0ecc84b6f3c12e80f35e856a291e701fdf.png" alt="Figure made with TikZ" /></p>
+<p><span class="caption-text">The Initial Timeline</span></p>
+</div></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="common-git-commands.html" class="btn btn-neutral float-left" title="Common Git Commands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="github-command-line-trunk-based-workflow.html" class="btn btn-neutral float-right" title="Github Command Line Trunk Based Workflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Roie R. Black.
+      <span class="lastupdated">Last updated on Jan 23, 2025.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

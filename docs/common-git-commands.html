@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Common Git Commands &mdash; Research Sources 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Git TBD Timeline" href="the-git-tbd-timeline.html" />
+    <link rel="prev" title="Reference Sources" href="reference-sources.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Research Sources
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reference-sources.html">Reference Sources</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Common Git Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#branch-management">Branch Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pushing-and-pulling">2. Pushing and Pulling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#committing">3. Committing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merging-the-feature-into-main">4. Merging the Feature into Main</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="the-git-tbd-timeline.html">The Git TBD Timeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github-command-line-trunk-based-workflow.html">Github Command Line Trunk Based Workflow</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Research Sources</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Common Git Commands</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/common-git-commands.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="common-git-commands">
+<h1>Common Git Commands<a class="headerlink" href="#common-git-commands" title="Link to this heading"></a></h1>
+<section id="branch-management">
+<h2>Branch Management<a class="headerlink" href="#branch-management" title="Link to this heading"></a></h2>
+<p>Create a branch, set the upstream to it and switch to the new branch. Name
+branches using some patterm like {user initials}/{branch name}</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-t<span class="w"> </span>-b<span class="w"> </span><span class="o">{</span>branch-name<span class="o">}</span>
+</pre></div>
+</div>
+<p>Switch to a branch</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span><span class="o">{</span>branch-name<span class="o">}</span>
+</pre></div>
+</div>
+<p>List all branches and upstreams</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-vv
+</pre></div>
+</div>
+<p>Once a branch has been merged into main, delete the feature branch</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span><span class="o">{</span>branch-name<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+<section id="pushing-and-pulling">
+<h2>2. Pushing and Pulling<a class="headerlink" href="#pushing-and-pulling" title="Link to this heading"></a></h2>
+<p>Pull the remote main into the local main, without changing the current branch</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>fetch<span class="w"> </span>origin<span class="w"> </span>main:main
+</pre></div>
+</div>
+<p>Push current work to remote, likely triggering tests</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin
+</pre></div>
+</div>
+<p>Update local branch with remote of the same branch name</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>pull
+</pre></div>
+</div>
+</section>
+<section id="committing">
+<h2>3. Committing<a class="headerlink" href="#committing" title="Link to this heading"></a></h2>
+<p>Add everything currently under work and new files</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>-A<span class="w"> </span>.
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;message&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="merging-the-feature-into-main">
+<h2>4. Merging the Feature into Main<a class="headerlink" href="#merging-the-feature-into-main" title="Link to this heading"></a></h2>
+<p>This is a bit of wizardry! I found it in an article <a class="reference external" href="https://medium.com/&#64;elischleifer/minimum-viable-git-for-trunk-based-development-81a5da7a77a7">Git for Trunk Based
+Development</a>:</p>
+<p>Step 1: Squash all local commits</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span><span class="k">$(</span>git<span class="w"> </span>merge-base<span class="w"> </span>HEAD<span class="w"> </span>main<span class="k">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">  </span>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>--allow-empty-message
+</pre></div>
+</div>
+<p>Step 2: Rebase</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>rebase<span class="w"> </span>main
+</pre></div>
+</div>
+<p>All of these commands track along the <strong>git</strong> timeline. It will help to see that
+timeline and how it flows. That will come in the next note:</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="reference-sources.html" class="btn btn-neutral float-left" title="Reference Sources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="the-git-tbd-timeline.html" class="btn btn-neutral float-right" title="The Git TBD Timeline" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Roie R. Black.
+      <span class="lastupdated">Last updated on Jan 23, 2025.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
